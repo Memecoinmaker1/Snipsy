@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatCoin - The Ultimate Meme Coin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>CatCoin</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home">
+        <h2>Welcome to CatCoin</h2>
+        <img src="cat.jpg" alt="Cat" class="cat-image">
+        <p>The new meme coin with the cutest cat on the net!</p>
+        <button>Buy Now</button>
+    </section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>CatCoin is a new meme coin created by cat lovers for cat lovers.</p>
+    </section>
+    <section id="roadmap">
+        <h2>Roadmap</h2>
+        <ul>
+            <li>Q1 2024: Launch</li>
+            <li>Q2 2024: Marketing Campaign</li>
+            <li>Q3 2024: New Features</li>
+        </ul>
+    </section>
+    <section id="team">
+        <h2>Our Team</h2>
+        <p>Our team consists of experienced developers and crypto experts.</p>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <footer>
+        <p>© 2024 CatCoin. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for flying cat images -->
+    <script>
+        function createFlyingCat() {
+            const cat = document.createElement('img');
+            cat.src = 'cat.jpg';
+            cat.className = 'flying-cat';
+            cat.style.left = Math.random() * window.innerWidth + 'px';
+            document.body.appendChild(cat);
+
+            setTimeout(() => {
+                cat.remove();
+            }, 5000);
+        }
+
+        setInterval(createFlyingCat, 1000);
+    </script>
+
+    <!-- JavaScript for "Meow" sound on hover -->
+    <script>
+        const meowSound = new Audio('meow.mp3');
+        document.addEventListener('mouseover', function(event) {
+            if (event.target.classList.contains('cat-image')) {
+                meowSound.play();
+            }
+        });
+    </script>
+</body>
+</html>
