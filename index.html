@@ -1,85 +1,156 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CatCoin - The Ultimate Meme Coin</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Viraly – Der Clip-Marktplatz</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script defer src="app.js"></script>
 </head>
 <body>
-    <header>
-        <h1>CatCoin</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#roadmap">Roadmap</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="home">
-        <h2>Welcome to CatCoin</h2>
-        <img src="cat.jpg" alt="Cat" class="cat-image">
-        <p>The new meme coin with the cutest cat on the net!</p>
-        <button>Buy Now</button>
-    </section>
-    <section id="about">
-        <h2>About Us</h2>
-        <p>CatCoin is a new meme coin created by cat lovers for cat lovers.</p>
-    </section>
-    <section id="roadmap">
-        <h2>Roadmap</h2>
-        <ul>
-            <li>Q1 2024: Launch</li>
-            <li>Q2 2024: Marketing Campaign</li>
-            <li>Q3 2024: New Features</li>
-        </ul>
-    </section>
-    <section id="team">
-        <h2>Our Team</h2>
-        <p>Our team consists of experienced developers and crypto experts.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <input type="submit" value="Submit">
-        </form>
-    </section>
-    <footer>
-        <p>© 2024 CatCoin. All rights reserved.</p>
-    </footer>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">🎬 Viraly</h1>
+      <nav class="nav">
+        <a href="#landing" onclick="showSection('landing')">Landing Page</a>
+        <a href="#about" onclick="showSection('about')">Was ist Viraly?</a>
+        <a href="#marketplace" onclick="showSection('marketplace')">Marktplatz</a>
+        <a href="#join" onclick="showSection('join')">Mitmachen</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- JavaScript for flying cat images -->
-    <script>
-        function createFlyingCat() {
-            const cat = document.createElement('img');
-            cat.src = 'cat.jpg';
-            cat.className = 'flying-cat';
-            cat.style.left = Math.random() * window.innerWidth + 'px';
-            document.body.appendChild(cat);
+  <section id="landing" class="section">
+    <div class="container">
+      <h2>✨ Startseiten-Text für Viraly</h2>
+      <div class="landing-content">
+        <div class="landing-card">
+          <h3>Clips verbreiten, Reichweite verdienen</h3>
+          <p>Viraly ist dein Sprungbrett in die Creator-Welt. Veröffentliche Clips großer Organisationen und verdiene Geld mit Reichweite, Engagement und Aufmerksamkeit – ganz ohne eigene Follower.</p>
+        </div>
+        <div class="landing-card">
+          <h3>Was ist Viraly?</h3>
+          <p>Viraly ist ein innovativer Marktplatz, der Creator, Organisationen und Social-Media-Nutzer miteinander verbindet. Ob Unternehmen, Parteien, Influencer oder NGOs – sie stellen Videoinhalte zur Verfügung und legen ein Budget fest. Du als Clipper postest diese Inhalte auf TikTok, Instagram, YouTube oder Snapchat – und wirst basierend auf der Performance deiner Posts belohnt.</p>
+        </div>
+        <div class="landing-card">
+          <h3>Warum mitmachen?</h3>
+          <ul>
+            <li>💸 Verdiene echtes Geld mit Reichweite</li>
+            <li>🧠 Lerne, wie viraler Content funktioniert</li>
+            <li>🚀 Werde Teil einer wachsenden Creator-Community</li>
+            <li>🔄 Volle Freiheit: Du entscheidest, wann und was du postest</li>
+          </ul>
+        </div>
+        <div class="landing-card">
+          <p>Jetzt mitmachen</p>
+          <p>Egal ob du Creator bist und deine Inhalte verbreiten willst – oder Clipper, der mit gutem Posting Geld verdienen möchte: Starte jetzt auf Viraly.</p>
+          <a href="#join" class="cta-button" onclick="showSection('join')">Jetzt mitmachen</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            setTimeout(() => {
-                cat.remove();
-            }, 5000);
-        }
+  <section id="about" class="section" style="display: none;">
+    <div class="container">
+      <h3>🧩 Was ist Viraly?</h3>
+      <p>Viraly ist ein digitaler Marktplatz für Reichweite. Er verbindet Creator und Organisationen mit einer aktiven Community von Social-Media-Nutzern, die bereit sind, Inhalte gezielt zu verbreiten – gegen faire Bezahlung.</p>
+      <p>Anstatt selbst teure Werbekampagnen zu schalten, können Unternehmen oder Influencer ihre Clips auf Viraly hochladen und ein Budget festlegen. Private Nutzer („Clipper“) veröffentlichen diese Inhalte auf TikTok, Instagram, YouTube Shorts oder Snapchat – und erhalten eine leistungsabhängige Vergütung.</p>
+      
+      <h4>So funktioniert Viraly – Schritt für Schritt:</h4>
+      <div class="grid-container">
+        <div class="step-card">
+          <div class="step-icon">🎥</div>
+          <div class="step-content">
+            <h5>Clip & Budget hochladen</h5>
+            <p>Organisationen, Parteien, Unternehmen oder Creator stellen ihr Video und ein Gesamtbudget zur Verfügung.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">📲</div>
+          <div class="step-content">
+            <h5>Clips auswählen & posten</h5>
+            <p>Nutzer durchstöbern den Marktplatz, wählen ein Video aus und posten es auf ihrem Social-Media-Kanal.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">📈</div>
+          <div class="step-content">
+            <h5>Reichweite wird automatisch gemessen</h5>
+            <p>Views, Likes, Shares und Interaktionen werden über Tracking-Technologien ausgewertet.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-icon">💰</div>
+          <div class="step-content">
+            <h5>Geld verdienen mit Aufmerksamkeit</h5>
+            <p>Je höher deine Performance, desto mehr bekommst du vom Budget – transparent und automatisch.</p>
+          </div>
+        </div>
+      </div>
+      
+      <p>🔐 Sicher. Fair. Einfach.</p>
+      <p>Viraly bringt Sichtbarkeit dahin, wo sie entsteht: bei echten Nutzern auf echten Plattformen. Mit nur wenigen Klicks kannst du Inhalte verbreiten – und dir dabei etwas dazuverdienen.</p>
+    </div>
+  </section>
 
-        setInterval(createFlyingCat, 1000);
-    </script>
+  <section id="marketplace" class="section" style="display: none;">
+    <div class="container">
+      <h3>Marktplatz</h3>
+      <div class="card-grid" id="marketplace-grid">
+        <div class="card">
+          <h4>Clip Titel</h4>
+          <p>Beschreibung des Clips</p>
+          <p>Plattformen: TikTok, Instagram</p>
+          <button onclick="selectClip()">Clip auswählen</button>
+        </div>
+        <!-- Weitere Clips können hier dynamisch hinzugefügt werden -->
+      </div>
+    </div>
+  </section>
 
-    <!-- JavaScript for "Meow" sound on hover -->
-    <script>
-        const meowSound = new Audio('meow.mp3');
-        document.addEventListener('mouseover', function(event) {
-            if (event.target.classList.contains('cat-image')) {
-                meowSound.play();
-            }
-        });
-    </script>
+  <section id="join" class="section" style="display: none;">
+    <div class="container">
+      <h3>Jetzt registrieren</h3>
+      <form id="join-form" onsubmit="event.preventDefault(); greetUser();">
+        <input type="text" placeholder="Dein Name" required />
+        <select required>
+          <option value="">Wähle deine Rolle</option>
+          <option value="creator">Creator</option>
+          <option value="clipper">Clipper</option>
+        </select>
+        <input type="text" placeholder="Social-Media-Handle (optional)" />
+        <button type="submit">Mitmachen</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Viraly – Empowering Clips, Rewarding Reach.</p>
+    </div>
+  </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function selectClip() {
+      alert("Clip ausgewählt!");
+    }
+
+    function greetUser() {
+      alert("Willkommen bei Viraly!");
+    }
+
+    // Standardmäßig die Landing-Seite anzeigen
+    showSection('landing');
+  </script>
 </body>
 </html>
